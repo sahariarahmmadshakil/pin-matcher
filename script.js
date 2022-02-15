@@ -25,7 +25,17 @@ document.getElementById('keys').addEventListener('click', function(event) {
         pinVerify.value = currentValue;
     }
 
-    // const prevValue = pinVerify.value;
-    // const currentValue = prevValue + number;
-    // pinVerify.value = currentValue;
 })
+
+function verifyPin() {
+    const verified = document.getElementById('verified');
+
+    const notVerified = document.getElementById('not-verified');
+    if (document.getElementById('pin-display').value == document.getElementById('pin-verify').value) {
+        verified.style.display = 'block';
+        notVerified.style.display = 'none';
+    } else {
+        notVerified.style.display = 'block';
+        verified.style.display = 'none';
+    }
+}
